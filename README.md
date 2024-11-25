@@ -14,7 +14,7 @@ Just run
 python ./gen_config.py
 ```
 
-and insert your credentials. A password 
+and insert your credentials and the TOTP secret in base32. A password protected configuration file is generated and stored into the `config` directory.
 
 ## Usage
 
@@ -29,7 +29,6 @@ Just pass the same options that you use for step-cli, for example:
 ## Security
 
 Obviously this approach defeats 2FA, and the confidentiality of your credentials is only secured by the password encrypted configuration file. This is basically the same as having a password protected key file, with the inconvenience that your credentials may also give access to other services. This is not at all advisable, but it's unfortunately the only possibility for running high-throughput simulations on the HPC platforms that I can access for the time being.
-
 
 
 
