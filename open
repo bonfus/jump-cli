@@ -45,6 +45,8 @@ try:
     SECRET = info["secret"]
 
     URL = sys.argv[1]
+    if URL == '-a'
+        URL = sys.argv[3]
 
     s = requests.session()
     r = s.get(URL)

@@ -44,7 +44,7 @@ try:
     PASSWORD = info["pass"]
     SECRET = info["secret"]
 
-    URL = sys.argv[1]
+    URL = sys.argv[2]
 
     s = requests.session()
     r = s.get(URL)
