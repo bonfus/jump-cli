@@ -1,5 +1,12 @@
 # jump-cli
 
+
+## IMPORTANT!
+
+This software reduces the 2FA authentication to one factor AND IS PROBABLY INCOMPATIBLE WITH THE SECURITY POLICIES OF YOUR HPC FACILITY! For example, usage of this software at CINECA would result in personal liability for security breaches that can be connected to your credentials.
+
+## Motivation
+
 > The most secure system is one that nobody can use!
 
 Running high-throughput simulations on HPC clusters requires uninterrupted access to the login nodes of the target machine, but the 2FA authentication methods generating very short lived keys makes it almost impossible to perform this kind of activity.
@@ -21,7 +28,7 @@ and insert your credentials and the TOTP secret in base32. A password protected 
 Just pass the same options that you use for step-cli, for example:
 
 ```bash
-    ./jump-cli ssh certificate "your-user" --force --insecure --no-password --no-agent --provisioner your-prov ~./ssh/your-shiny-new-keys
+    ./jump-cli ssh certificate "your-user" --provisioner your-prov ~./ssh/your-shiny-new-keys
 ```
 
 `jump-cli` will start a never ending loop to update you keys every 2 hours.
